@@ -1,21 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="stylesheet/index.css">
 
     <title>Cute Center Coffee</title>
 
 
 </head>
-<body>
-    
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<body>
+    <h1 class="display-4 text-center">coffee club</h1>
+    <div class="container">
+        <div class="row">
+
+            <div class="col">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="media">
+                            <img class="mr-3 cc-profile" src="assets/profile/marcus.jpg" alt="marcus">
+                            <div class="media-body">
+                                <button class="cc-btn js-club-btn" data-toggle="modal" data-target="#formModal">Marcus</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="media">
+                            <img class="mr-3 cc-profile" src="assets/profile/yonglin.jpg" alt="yong lin">
+                            <div class="media-body">
+                                <button class="cc-btn js-club-btn" data-toggle="modal" data-target="#formModal">Yong Lin</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="media">
+                            <img class="mr-3 cc-profile" src="assets/profile/chorguan.jpg" alt="chor guan">
+                            <div class="media-body">
+                                <button class="cc-btn js-club-btn" data-toggle="modal" data-target="#formModal">Chor Guan</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="media">
+                            <img class="mr-3 cc-profile" src="assets/profile/ivan.jpg" alt="ivan">
+                            <div class="media-body">
+                                <button class="cc-btn js-club-btn" data-toggle="modal" data-target="#formModal">Ivan</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="media">
+                            <img class="mr-3 cc-profile" src="assets/profile/guest.png" alt="geust">
+                            <div class="media-body">
+                                <button class="cc-btn js-guest-btn" data-toggle="modal" data-target="#formModal">Guest</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <p><a href="https://goo.gl/eg8QM7">View spreadsheet</a></p>
+            </div>
+
+
+        </div>
+        <div class="row js-non-form" hidden>
+            <div class="col">
+                <form action="https://script.google.com/macros/s/AKfycbxkeNWZtsqj4NYbG36M9F1kus8nNyt1uT8AJ0nL_xrDURG-p0iI/exec" method="post">
+                    <fieldset>
+                        <legend>Non Members</legend>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control form-control-lg" name="NAME" id="name" placeholder="Enter name">
+                        </div>
+
+                        <div class="form-group">
+                            <p class="h6 text-center">Paypal payment</p>
+                            <img src="assets/paypal_qrcode.svg" alt="paypal qr" class="mx-auto d-block">
+                            <p class="text-center">https://www.paypal.me/mrivantan/0.7</p>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-default btn-block">Submit</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="formModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+    <script src="javascript/form.js"></script>
 </body>
+
 </html>
