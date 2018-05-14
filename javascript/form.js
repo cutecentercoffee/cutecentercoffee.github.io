@@ -6,10 +6,9 @@ $(function () {
         event.preventDefault();
 
         var sendData = {};
-        $(event.target.nodeName + ' :input').each(function(){
+        $(event.target.nodeName + ' :input').each(function () {
             sendData[this.name] = $(this).val();
         });
-
         var posting = $.ajax({
             type: 'POST',
             url: $(event.target.nodeName).prop('action'),
@@ -18,32 +17,47 @@ $(function () {
 
         posting.done(function (response) {
             console.log(response);
-            $('#alert-id').prop('hidden', false);
-            $('form :input').each(function(){
-                $(this).val('');
-            })
+            $('.modal').modal('hide');
+            $('#successModal').modal('show');
         });
         posting.fail(function (response) {
             console.log(response);
+            $('.modal').modal('hide');
+            $('#errorModal').modal('show');
         });
     });
 
-// RESPONSE ALERT WINDOW-------------------------------------------------------------------------------
-/* include the following HTML to use:
-<div class="form-group">
-    <button type="submit" class="btn btn-default my-btn form-control" id="submit-id">submit</button>                   
-    <div class="alert alert-danger alert-dismissible fade in" hidden id="alert-id">
-        <button type="button" class="close" id="close-id"><span>&times;</span></button>
-        Thank you! I will get in touch.
-    </div>
-</div>
-*/
+    $('#memberModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget);
+        var recipient = button.data('username');
+        var url = button.data('profile');
+        var modal = $(this);
+        modal.find('.js-mModal__name').text(recipient);
+        modal.find('.js-mModal__profile').attr('src', url);
+    });
 
-    // on clicking the X button
-    $('#close-id').click(function(){
-        // hide the alert panel by adding the hidden property
-        $('#alert-id').prop('hidden', true);
-        // optionally reload the webpage
+    $('.js-member-order__btn').click(function () {
+        var sendData = {};
+        sendData['NAME'] = $('.js-mModal__name').html();
+        var posting = $.ajax({
+            type: 'POST',
+            url: 'https://script.google.com/macros/s/AKfycbxkeNWZtsqj4NYbG36M9F1kus8nNyt1uT8AJ0nL_xrDURG-p0iI/exec',
+            data: sendData
+        });
+
+        posting.done(function (response) {
+            console.log(response);
+            $('.modal').modal('hide');
+            $('#successModal').modal('show');
+        });
+        posting.fail(function (response) {
+            console.log(response);
+            $('.modal').modal('hide');
+            $('#errorModal').modal('show');
+        });
+    });
+
+    $('.js-reset__btn').click(function () {
         location.reload();
     });
 

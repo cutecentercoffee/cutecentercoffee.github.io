@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
         crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="stylesheet/index.css">
 
     <title>Cute Center Coffee</title>
@@ -23,98 +23,171 @@
 
             <div class="col">
                 <ul class="list-group">
+
                     <li class="list-group-item">
-                        <div class="media">
-                            <img class="mr-3 cc-profile" src="assets/profile/marcus.jpg" alt="marcus">
-                            <div class="media-body">
-                                <button class="cc-btn js-club-btn" data-toggle="modal" data-target="#formModal">Marcus</button>
+                        <button class="cc-btn js-guest-btn" data-toggle="modal" data-target="#memberModal" data-username="Marcus" data-profile="assets/profile/marcus.jpg">
+                            <div class="media">
+                                <img class="mr-3 cc-profile" src="assets/profile/marcus.jpg" alt="Marcus">
+                                <div class="media-body">
+                                    <p class="cc-btn__p">Marcus</p>
+                                </div>
                             </div>
-                        </div>
+                        </button>
                     </li>
+
                     <li class="list-group-item">
-                        <div class="media">
-                            <img class="mr-3 cc-profile" src="assets/profile/yonglin.jpg" alt="yong lin">
-                            <div class="media-body">
-                                <button class="cc-btn js-club-btn" data-toggle="modal" data-target="#formModal">Yong Lin</button>
+                        <button class="cc-btn js-guest-btn" data-toggle="modal" data-target="#memberModal" data-username="Yong Lin" data-profile="assets/profile/yonglin.jpg">
+                            <div class="media">
+                                <img class="mr-3 cc-profile" src="assets/profile/yonglin.jpg" alt="Yong Lin">
+                                <div class="media-body">
+                                    <p class="cc-btn__p">Yong Lin</p>
+                                </div>
                             </div>
-                        </div>
+                        </button>
                     </li>
+
                     <li class="list-group-item">
-                        <div class="media">
-                            <img class="mr-3 cc-profile" src="assets/profile/chorguan.jpg" alt="chor guan">
-                            <div class="media-body">
-                                <button class="cc-btn js-club-btn" data-toggle="modal" data-target="#formModal">Chor Guan</button>
+                        <button class="cc-btn js-guest-btn" data-toggle="modal" data-target="#memberModal" data-username="Chor Guan" data-profile="assets/profile/chorguan.jpg">
+                            <div class="media">
+                                <img class="mr-3 cc-profile" src="assets/profile/chorguan.jpg" alt="Chor Guan">
+                                <div class="media-body">
+                                    <p class="cc-btn__p">Chor Guan</p>
+                                </div>
                             </div>
-                        </div>
+                        </button>
                     </li>
+
                     <li class="list-group-item">
-                        <div class="media">
-                            <img class="mr-3 cc-profile" src="assets/profile/ivan.jpg" alt="ivan">
-                            <div class="media-body">
-                                <button class="cc-btn js-club-btn" data-toggle="modal" data-target="#formModal">Ivan</button>
+                        <button class="cc-btn js-guest-btn" data-toggle="modal" data-target="#memberModal" data-username="Ivan" data-profile="assets/profile/ivan.jpg">
+                            <div class="media">
+                                <img class="mr-3 cc-profile" src="assets/profile/ivan.jpg" alt="Ivan">
+                                <div class="media-body">
+                                    <p class="cc-btn__p">Ivan</p>
+                                </div>
                             </div>
-                        </div>
+                        </button>
                     </li>
+
                     <li class="list-group-item">
-                        <div class="media">
-                            <img class="mr-3 cc-profile" src="assets/profile/guest.png" alt="geust">
-                            <div class="media-body">
-                                <button class="cc-btn js-guest-btn" data-toggle="modal" data-target="#formModal">Guest</button>
+                        <button class="cc-btn js-guest-btn" data-toggle="modal" data-target="#nonMemberModal">
+                            <div class="media">
+                                <img class="mr-3 cc-profile" src="assets/profile/guest.png" alt="geust">
+                                <div class="media-body">
+                                    <p class="cc-btn__p">Guest</p>
+                                </div>
                             </div>
-                        </div>
+                        </button>
                     </li>
                 </ul>
-                <p><a href="https://goo.gl/eg8QM7">View spreadsheet</a></p>
-            </div>
-
-
-        </div>
-        <div class="row js-non-form" hidden>
-            <div class="col">
-                <form action="https://script.google.com/macros/s/AKfycbxkeNWZtsqj4NYbG36M9F1kus8nNyt1uT8AJ0nL_xrDURG-p0iI/exec" method="post">
-                    <fieldset>
-                        <legend>Non Members</legend>
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" class="form-control form-control-lg" name="NAME" id="name" placeholder="Enter name">
-                        </div>
-
-                        <div class="form-group">
-                            <p class="h6 text-center">Paypal payment</p>
-                            <img src="assets/paypal_qrcode.svg" alt="paypal qr" class="mx-auto d-block">
-                            <p class="text-center">https://www.paypal.me/mrivantan/0.7</p>
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-default btn-block">Submit</button>
-                        </div>
-                    </fieldset>
-                </form>
+                <p>
+                    <a href="https://goo.gl/eg8QM7">View spreadsheet</a>
+                </p>
             </div>
         </div>
     </div>
-    <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
+
+    <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="formModalLabel">Modal title</h5>
+                <div class="modal-body text-center">
+
+                    <i class="fa fa-check-circle fa-5x text-success"></i>
+                    <p>Enjoy your coffee!</p>
+                    <button class="btn btn-success js-reset__btn">Cheers</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+
+                    <i class="fa fa-times-circle fa-5x text-danger"></i>
+                    <p>There was an error with the transaction. Go ahead and have your coffee and let Ivan know.</p>
+                    <button class="btn btn-danger js-reset__btn">oh well :(</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="memberModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
+
+                    <img src="" alt="profile picture" class="cc-mModal__profile js-mModal__profile">   
+                    <h6 class="text-center">Hey <span class="js-mModal__name"></span></h6>
+                    <p class="text-center">Welcome back, want to add this coffee to your tab?</p>
+                    <button class="btn btn-success btn-block js-member-order__btn">Confirm</button>
                 </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="nonMemberModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
                 <div class="modal-body">
-                    ...
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <form id="non-member-form" action="https://script.google.com/macros/s/AKfycbxkeNWZtsqj4NYbG36M9F1kus8nNyt1uT8AJ0nL_xrDURG-p0iI/exec"
+                        method="POST">
+                        <fieldset>
+                            <legend>Non Member</legend>
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control form-control-lg" name="NAME" id="name" placeholder="Enter name">
+                            </div>
+                            <h6>Payment Methods</h6>
+                            <p>You may pay
+                                <strong>Ivan</strong> immediately through one of the following methods.</p>
+                            <a class="btn btn-outline-primary" data-toggle="collapse" href="#paypalCard" role="button" aria-expanded="false" aria-controls="paypalCard">
+                                Paypal
+                            </a>
+                            <a class="btn btn-outline-primary" data-toggle="collapse" href="#dbsCard" role="button" aria-expanded="false" aria-controls="dbsCard">
+                                PayNow / PayLah
+                            </a>
+                            <div class="form-group">
+                                <div class="collapse" id="paypalCard">
+                                    <div class="card card-body">
+                                        <p class="h6 text-center">Paypal payment</p>
+                                        <img src="assets/paypal_qrcode.svg" alt="paypal qr" class="mx-auto d-block">
+                                        <p class="text-center">https://www.paypal.me/mrivantan/0.7</p>
+                                        <small>Do you drink cute coffee often? sign up as a member with Ivan!</small>
+                                    </div>
+                                </div>
+                                <div class="collapse" id="dbsCard">
+                                    <div class="card card-body">
+                                        <p class="h6">PayLah / PayNow</p>
+                                        <p>Transfer
+                                            <strong>$0.68</strong> to Ivan with mobile number:</p>
+                                        <h5>90262302</h5>
+                                        <small>Do you drink cute coffee often? sign up as a member with Ivan!</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                            </div>
+                        </fieldset>
+                    </form>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
+
             </div>
         </div>
     </div>
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
