@@ -1,14 +1,14 @@
-.cc-profile{
+.cc-profile__img{
     width: 100px;
     height: 100px;
 }
-.cc-btn{
+.cc-profile{
     border: none;
     background: none;
     font-size: 1.5rem;
     width: 100%;
 }
-.cc-btn__p{
+.cc-profile__p{
     margin-top: 1.5rem;
     text-align: left;
 }
@@ -18,4 +18,41 @@
     border: none;
     border-radius: 50%;
     margin: 1rem auto;
+}
+
+.modal{
+    z-index: 9;
+}
+.modal-backdrop{
+    z-index: 8;
+}
+.cc-loader{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    top:0;
+    left:0;
+    z-index: 10;
+}
+.cc-loader__flex-container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.cc-loader__circle {
+    border: 16px solid #FF6978; /* Light grey */
+    border-top: 16px solid #F93943; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }

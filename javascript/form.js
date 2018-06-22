@@ -1,9 +1,11 @@
 $(function () {
-
+    $('.js-loader').hide();
+    
     // on submitting the form
     $('form').submit(function (event) {
         // prevent the default action of reloading the page
         event.preventDefault();
+        $('.js-loader').show(500);
 
         var sendData = {};
         $(event.target.nodeName + ' :input').each(function () {
@@ -19,11 +21,13 @@ $(function () {
             console.log(response);
             $('.modal').modal('hide');
             $('#successModal').modal('show');
+            $('.js-loader').hide();
         });
         posting.fail(function (response) {
             console.log(response);
             $('.modal').modal('hide');
             $('#errorModal').modal('show');
+            $('.js-loader').hide();
         });
     });
 
@@ -37,8 +41,14 @@ $(function () {
     });
 
     $('.js-member-order__btn').click(function () {
+        $('.js-loader').show();
         var sendData = {};
         sendData['NAME'] = $('.js-mModal__name').html();
+        $('.js-coffee-type').each(function (i) {
+            if ($(this).prop('checked'))
+                sendData['COST'] = $(this).val();
+        })
+
         var posting = $.ajax({
             type: 'POST',
             url: 'https://script.google.com/macros/s/AKfycbxkeNWZtsqj4NYbG36M9F1kus8nNyt1uT8AJ0nL_xrDURG-p0iI/exec',
@@ -49,11 +59,13 @@ $(function () {
             console.log(response);
             $('.modal').modal('hide');
             $('#successModal').modal('show');
+            $('.js-loader').hide();
         });
         posting.fail(function (response) {
             console.log(response);
             $('.modal').modal('hide');
             $('#errorModal').modal('show');
+            $('.js-loader').hide();
         });
     });
 
