@@ -73,4 +73,8 @@ $(function () {
         location.reload();
     });
 
+    $('.js-scroll-to-top').click(function(event){
+        window.scrollTo(0,0);
+    });
+
 });
